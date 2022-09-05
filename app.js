@@ -1,11 +1,7 @@
 const express = require("express");
 const app = express();
-
-
-app.get("/" , (req  , res)=>{
-
-    res.send("<h1>towhids home page</h1>")
-})
+const path = require("path")
+app.use(express.static(path.join(__dirname , "./public")))
 
 
 
